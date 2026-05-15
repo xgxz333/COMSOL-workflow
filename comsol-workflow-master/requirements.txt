@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+matplotlib
+MPh
+jpype1
+optuna
+nevergrad
+pyarrow
+filelock
+cmaes
+sympy
+loguru
+tqdm
