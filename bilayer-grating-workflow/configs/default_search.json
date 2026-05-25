@@ -1,0 +1,58 @@
+{
+  "design": {
+    "period_um": 0.82,
+    "duty_cycle": 0.55,
+    "si_thickness_um": 0.22,
+    "vertical_gap_um": 0.14,
+    "pcm_thickness_um": 0.03,
+    "sio2_cap_thickness_um": 0.18,
+    "cladding_um": 0.65,
+    "pml_um": 0.45,
+    "kx_norm": 0.12
+  },
+  "materials": {
+    "si": {"n": 3.48, "k": 0.0},
+    "sio2": {"n": 1.45, "k": 0.0},
+    "background": {"n": 1.0, "k": 0.0},
+    "pcm_states": {
+      "amorphous": {"n": 4.724, "k": 0.05},
+      "crystalline": {"n": 5.96, "k": 0.30}
+    }
+  },
+  "simulation": {
+    "target_frequency_thz": 183.5,
+    "frequency_window_thz": [170.0, 200.0],
+    "eigenfrequency_shift_thz": 183.5,
+    "num_modes": 8,
+    "use_material_loss": true
+  },
+  "objective": {
+    "amorphous_direction": "up",
+    "crystalline_direction": "down",
+    "minimum_directionality_db": 6.0,
+    "directionality_cap_db": 30.0,
+    "frequency_tolerance_thz": 5.0,
+    "minimum_q": 100.0,
+    "weights": {
+      "log_q": 1.0,
+      "directionality": 1.0,
+      "direction_shortfall": 2.0,
+      "target_frequency": 1.0,
+      "state_frequency_match": 1.0
+    }
+  },
+  "optimization": {
+    "method": "NevergradNGOpt",
+    "iterations": 50,
+    "batch_size": 4,
+    "bounds": {
+      "period_um": [0.70, 1.00],
+      "duty_cycle": [0.25, 0.78],
+      "si_thickness_um": [0.12, 0.45],
+      "vertical_gap_um": [0.03, 0.40],
+      "pcm_thickness_um": [0.01, 0.08],
+      "sio2_cap_thickness_um": [0.05, 0.40],
+      "kx_norm": [0.06, 0.18]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+matplotlib
+MPh
+jpype1
+nevergrad
+pyarrow
+loguru
