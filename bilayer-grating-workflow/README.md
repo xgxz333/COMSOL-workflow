@@ -7,7 +7,9 @@ ridges, an upper-only phase-change-material (PCM) cap, and SiO2 layers.
 
 The workflow is motivated by Zhang et al., *Laser & Photonics Reviews* 18,
 2301233 (2024). A paper-to-model summary is available in
-[`docs/paper_to_model.md`](docs/paper_to_model.md).
+[`docs/paper_to_model.md`](docs/paper_to_model.md). For continuing this work
+on a COMSOL server with a new Codex thread, use
+[`docs/SERVER_HANDOFF.md`](docs/SERVER_HANDOFF.md).
 
 ## Device model
 
